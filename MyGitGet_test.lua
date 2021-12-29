@@ -2,6 +2,7 @@ shell.run("clear")
 -- settings
 repo = "https://raw.githubusercontent.com/tretapolis-dev/computercraft/main/"
 name = "test"
+if fs.exists(name) == true then fs.delete(name) end
 erfolg = true
 -- -
 -- print("Downloading " .. name .. ".lua ...")
