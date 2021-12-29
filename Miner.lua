@@ -1,4 +1,4 @@
--- links oben Fuel > fackeln > chest fuel > chest fackeln  >CHEST Miningmaterial> cobblestone
+-- links oben Fuel > fackeln > chest fuel > Testchest fackeln  >CHEST Miningmaterial> cobblestone
 tunnelabstand = 1
 torchabstand = 1
 refuelTorches = true
