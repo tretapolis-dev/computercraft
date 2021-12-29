@@ -1,6 +1,6 @@
 -- settings
 repo = "https://raw.githubusercontent.com/tretapolis-dev/computercraft/main/"
-name = "test"
+name = "Miner"
 erfolg = true
 -- -
 print("Downloading " .. name .. ".lua ...")
