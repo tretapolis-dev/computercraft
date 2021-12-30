@@ -22,6 +22,6 @@ name = "test"
 --         -- print("Download fehlgeschlagen!")
 --     end
 -- end
-request = http.get(repo .. name .. ".lua", {os.time()})
+request = http.get(repo .. name .. ".lua?t=" .. os.time())
 print(request.readAll())
 request.close()
