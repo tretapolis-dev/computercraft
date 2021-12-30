@@ -45,15 +45,12 @@ if not ok then
     if err then printError(err) end
     return nil
 end
-
 local response = http.get(repo .. name .. ".lua?cb=" .. cacheBuster, nil, true)
 if not response then
     print("Failed.")
     return nil
 end
-
 print("Success.")
-
 local sResponse = response.readAll()
 response.close()
 local sPath = shell.resolve(name)
