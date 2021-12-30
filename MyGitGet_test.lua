@@ -3,7 +3,7 @@ shell.run("clear")
 -- settings
 repo = "https://raw.githubusercontent.com/tretapolis-dev/computercraft/main/"
 name = "test"
--- if fs.exists(name) == true then fs.delete(name) end
+if fs.exists(name) == true then fs.delete(name) end
 -- -
 -- print("Downloading " .. name .. ".lua ...")
 http.request(repo .. name .. ".lua")
