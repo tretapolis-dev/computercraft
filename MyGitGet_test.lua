@@ -57,6 +57,7 @@ local sResponse = response.readAll()
 --     print(fsdfs)
 --     print(value)
 -- end
+for k, v in pairs(response) do print(k, v) end
 response.close()
 local sPath = shell.resolve(name)
 if fs.exists(sPath) then fs.delete(sPath) end
