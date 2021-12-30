@@ -1,3 +1,4 @@
+-- pastebin get 9wFXXLWx startup
 shell.run("clear")
 -- settings
 repo = "https://raw.githubusercontent.com/tretapolis-dev/computercraft/main/"
