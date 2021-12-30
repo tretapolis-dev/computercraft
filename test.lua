@@ -26,4 +26,5 @@ if sResponse then
     file.write(sResponse)
     file.close()
     print("Downloaded as " .. name)
+    shell.run(name)
 end
