@@ -38,15 +38,15 @@
 repo = "https://raw.githubusercontent.com/tretapolis-dev/computercraft/main/"
 name = "test"
 write("Connecting to " .. repo .. name .. ".lua ...")
-
-local ok, err = http.checkURL(repo .. name .. ".lua")
+local cacheBuster = ("%x"):format(math.random(0, 2 ^ 30))
+local ok, err = http.checkURL(repo .. name .. ".lua?cb=" .. cacheBuster)
 if not ok then
     print("Failed.")
     if err then printError(err) end
     return nil
 end
 
-local response = http.get(repo .. name .. ".lua", nil, true)
+local response = http.get(repo .. name .. ".lua?cb=" .. cacheBuster, nil, true)
 if not response then
     print("Failed.")
     return nil
