@@ -6,7 +6,7 @@ name = "test"
 if fs.exists(name) == true then fs.delete(name) end
 -- -
 -- print("Downloading " .. name .. ".lua ...")
-http.request(repo .. name .. ".lua")
+http.request(repo .. name .. ".lua", nil, {os.time()})
 while true do
     local event, url, h = os.pullEvent()
     if event == "http_success" then
