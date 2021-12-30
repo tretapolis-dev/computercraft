@@ -28,7 +28,8 @@ name = "test"
 -- print(request.readAll())
 -- request.close()
 local cacheBuster = ("%x"):format(math.random(0, 2 ^ 30))
-local response, err = http.get(repo .. read() .. ".lua?cb=" .. cacheBuster)
+local response, err = http.get(repo .. read() .. ".lua?cb=" .. cacheBuster, nil,
+                               true)
 -- local response, err = http.get(repo .. name .. ".lua?cb=" .. cacheBuster)
 local sResponse = response.readAll()
 response.close()
