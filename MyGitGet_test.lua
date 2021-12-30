@@ -4,7 +4,6 @@ shell.run("clear")
 repo = "https://raw.githubusercontent.com/tretapolis-dev/computercraft/main/"
 name = "test"
 if fs.exists(name) == true then fs.delete(name) end
-erfolg = true
 -- -
 -- print("Downloading " .. name .. ".lua ...")
 http.request(repo .. name .. ".lua")
@@ -19,10 +18,9 @@ while loop do
         file.close()
         -- print("Saved " .. name .. ".lua")
         loop = false
+        shell.run(name)
     elseif event == "http_failure" then
         -- print("Download fehlgeschlagen!")
         loop = false
-        erfolg = false
     end
 end
-if erfolg == true then shell.run(name) end
