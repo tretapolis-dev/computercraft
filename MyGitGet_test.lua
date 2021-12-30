@@ -6,9 +6,8 @@ name = "test"
 if fs.exists(name) == true then fs.delete(name) end
 -- -
 -- print("Downloading " .. name .. ".lua ...")
-http.request(repo .. name .. ".lua", os.time() .. "test")
-local loop = true
-while loop do
+http.request(repo .. name .. ".lua")
+while true do
     local event, url, h = os.pullEvent()
     if event == "http_success" then
         local content = h.readAll()
@@ -17,10 +16,8 @@ while loop do
         file.write(content)
         file.close()
         -- print("Saved " .. name .. ".lua")
-        loop = false
         shell.run(name)
     elseif event == "http_failure" then
         -- print("Download fehlgeschlagen!")
-        loop = false
     end
 end
