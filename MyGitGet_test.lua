@@ -53,10 +53,10 @@ end
 print("Success.")
 local sResponse = response.readAll()
 
-for fsdfs, value in response do
-    print(fsdfs)
-    print(value)
-end
+-- for fsdfs, value in response do
+--     print(fsdfs)
+--     print(value)
+-- end
 response.close()
 local sPath = shell.resolve(name)
 if fs.exists(sPath) then fs.delete(sPath) end
