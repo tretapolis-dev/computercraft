@@ -45,7 +45,7 @@ if not ok then
     if err then printError(err) end
     return nil
 end
-local response = http.get(repo .. name .. ".lua?cb=" .. cacheBuster, nil, true)
+response = http.get(repo .. name .. ".lua?cb=" .. cacheBuster, nil, true)
 if not response then
     print("Failed.")
     return nil
