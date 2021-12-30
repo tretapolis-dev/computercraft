@@ -54,7 +54,6 @@ print("Success.")
 local sResponse = response.readAll()
 
 for name, value in response do
-    value = "foobar"
     print(name)
     print(value)
 end
