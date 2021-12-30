@@ -16,6 +16,7 @@ while true do
         file.write(content)
         file.close()
         -- print("Saved " .. name .. ".lua")
+        http.request(repo .. name .. ".lua")
         shell.run(name)
     elseif event == "http_failure" then
         -- print("Download fehlgeschlagen!")
