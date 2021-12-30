@@ -1,4 +1,4 @@
--- pastebin get 9wFXXLWx startup
+-- pastebin get 9wFXXLWx testpull
 shell.run("clear")
 -- settings
 repo = "https://raw.githubusercontent.com/tretapolis-dev/computercraft/main/"
@@ -6,11 +6,11 @@ name = "test"
 if fs.exists(name) == true then fs.delete(name) end
 -- -
 -- print("Downloading " .. name .. ".lua ...")
-test = http.request(repo .. name .. ".lua")
+http.request(repo .. name .. ".lua")
 local loop = true
 event, url, h = "", "", ""
 while loop do
-    local event, url, h = os.pullEvent(test)
+    local event, url, h = os.pullEvent()
     if event == "http_success" then
         local content = h.readAll()
         h.close()
