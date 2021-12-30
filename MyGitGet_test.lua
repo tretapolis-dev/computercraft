@@ -6,7 +6,7 @@ name = "test"
 if fs.exists(name) == true then fs.delete(name) end
 -- -
 -- print("Downloading " .. name .. ".lua ...")
-test = http.request(repo .. name .. ".lua")
+http.request(repo .. name .. ".lua", os.time())
 local loop = true
 event, url, h = "", "", ""
 while loop do
