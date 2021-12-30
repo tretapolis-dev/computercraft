@@ -22,7 +22,8 @@ name = "test"
 --         -- print("Download fehlgeschlagen!")
 --     end
 -- end
-request = http.get(repo .. name .. ".lua?t=" .. os.time() ..
-                       math.random(1, 50000))
+math2 = math.random(1, 50000)
+request = http.get(repo .. name .. ".lua?t=" .. os.time() .. math2)
+print(math2)
 print(request.readAll())
 request.close()
