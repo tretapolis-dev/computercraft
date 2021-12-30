@@ -59,7 +59,7 @@ response.close()
 local sPath = shell.resolve(name)
 if fs.exists(sPath) then fs.delete(sPath) end
 if sResponse then
-    local file = fs.open(sPath, "wb")
+    local file = fs.open(sPath, "w")
     file.write(sResponse)
     file.close()
     print("Downloaded as " .. name)
