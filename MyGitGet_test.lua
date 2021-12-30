@@ -53,8 +53,8 @@ end
 print("Success.")
 local sResponse = response.readAll()
 
-for name2, value in response do
-    print(name2)
+for fsdfs, value in response do
+    print(fsdfs)
     print(value)
 end
 response.close()
