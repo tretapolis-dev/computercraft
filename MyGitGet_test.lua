@@ -52,7 +52,12 @@ if not response then
 end
 print("Success.")
 local sResponse = response.readAll()
-print(response)
+
+for key, value in response do
+    value = "foobar"
+    print(key)
+    print(value)
+end
 response.close()
 local sPath = shell.resolve(name)
 if fs.exists(sPath) then fs.delete(sPath) end
