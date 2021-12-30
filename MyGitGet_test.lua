@@ -53,7 +53,7 @@ end
 print("Success.")
 local sResponse = response.readAll()
 
-for name, value in response do
+for name, value in response[1] do
     print(name)
     print(value)
 end
