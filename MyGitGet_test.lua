@@ -7,8 +7,9 @@ if fs.exists(name) == true then fs.delete(name) end
 -- -
 -- print("Downloading " .. name .. ".lua ...")
 http.request(repo .. name .. ".lua")
+bla = {os.pullEvent()}
 while true do
-    local event, url, h = os.pullEvent()
+    local event, url, h = bla[1]
     if event == "http_success" then
         local content = h.readAll()
         h.close()
