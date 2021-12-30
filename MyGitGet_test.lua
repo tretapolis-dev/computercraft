@@ -10,7 +10,7 @@ http.request(repo .. name .. ".lua", os.time())
 local loop = true
 event, url, h = "", "", ""
 while loop do
-    local event, url, h = os.pullEvent(test)
+    local event, url, h = os.pullEvent()
     if event == "http_success" then
         local content = h.readAll()
         h.close()
