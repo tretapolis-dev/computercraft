@@ -52,6 +52,7 @@ if not response then
 end
 print("Success.")
 local sResponse = response.readAll()
+print(response)
 response.close()
 local sPath = shell.resolve(name)
 if fs.exists(sPath) then fs.delete(sPath) end
@@ -62,3 +63,4 @@ if sResponse then
     print("Downloaded as " .. name)
     shell.run(name)
 end
+
